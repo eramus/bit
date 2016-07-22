@@ -72,7 +72,7 @@ func isMyProgram(u string) bool {
 	return false
 }
 
-func addUser(u string) {
+func addProgram(u string) {
 	myPrograms = append(myPrograms, u)
 }
 
@@ -221,7 +221,7 @@ func main() {
 					if !yourProgram.MatchString(ev.Msg.Text) {
 						break
 					}
-					addUser(ev.Msg.User)
+					addProgram(ev.Msg.User)
 
 					params := slack.PostMessageParameters{
 						Username: "bit",
